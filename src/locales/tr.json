@@ -79,7 +79,7 @@
     "audioNotSupported": "Tarayıcınız ses oynatmayı desteklemiyor."
   },
   "fileList": {
-    "title": "Yüklenen Dosyalar",
+    "title": "Audio Collection",
     "noFiles": "Henüz dosya yüklenmedi.",
     "noFilteredFiles": "Filtrelere uygun dosya bulunamadı. Lütfen filtreleri değiştirin.",
     "deleteConfirm": "dosyasını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz!",

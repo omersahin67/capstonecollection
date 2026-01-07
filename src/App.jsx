@@ -673,7 +673,7 @@ function App() {
         <h1>{t("fileList.title")}</h1>
         <div className="user-info">
           <LanguageSelector />
-          <span>{user.email}</span>
+          <span>Hello Guys!</span>
           <button onClick={handleLogout} className="logout-button">
             {t("common.close")}
           </button>

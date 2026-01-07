@@ -79,7 +79,7 @@
     "audioNotSupported": "Your browser does not support audio playback."
   },
   "fileList": {
-    "title": "Uploaded Files",
+    "title": "Audio Collection",
     "noFiles": "No files uploaded yet.",
     "noFilteredFiles": "No files match the filters. Please change the filters.",
     "deleteConfirm": "Are you sure you want to delete the file",
