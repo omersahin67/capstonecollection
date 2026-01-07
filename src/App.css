@@ -1,0 +1,866 @@
+/* Ana uygulama stilleri */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  font-size: 24px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logout-button {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.app-main {
+  flex: 1;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-main p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/* Dosya listesi stilleri */
+.files-section {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.files-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.files-section h2 {
+  color: #333;
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Filtre Container */
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-container label {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.emotion-filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #000;
+  background-color: white;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.emotion-filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.emotion-filter-select option {
+  color: #000;
+  background-color: white;
+}
+
+.filter-info {
+  color: #666;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* Gelişmiş Filtreleme Stilleri */
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.basic-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.basic-filters label {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.advanced-filters-toggle {
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+}
+
+.advanced-filters-toggle:hover {
+  background: #5568d3;
+  transform: translateY(-1px);
+}
+
+.filter-badge {
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.clear-filters-btn {
+  padding: 8px 16px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.3s;
+}
+
+.clear-filters-btn:hover {
+  background: #ee5a5a;
+}
+
+.advanced-filters {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.advanced-filters h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: #555;
+  font-size: 14px;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: white;
+  color: #000;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.range-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.range-inputs input {
+  flex: 1;
+  min-width: 0;
+}
+
+.range-inputs span {
+  color: #666;
+  font-weight: 500;
+}
+
+.filter-results-info {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #e8f4f8;
+  border-radius: 5px;
+  border-left: 3px solid #667eea;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Toplu İşlemler Stilleri */
+.bulk-actions-panel {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.bulk-actions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.select-all-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bulk-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.select-all-controls label {
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.bulk-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bulk-action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bulk-action-btn:hover {
+  transform: translateY(-1px);
+}
+
+.bulk-delete-btn {
+  background: #ff4444;
+  color: white;
+}
+
+.bulk-delete-btn:hover {
+  background: #cc0000;
+}
+
+.bulk-dataset-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.bulk-dataset-btn {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.train-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.train-btn:hover {
+  background: #45a049;
+}
+
+.test-btn {
+  background: #ff9800;
+  color: white;
+}
+
+.test-btn:hover {
+  background: #e68900;
+}
+
+.validation-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.validation-btn:hover {
+  background: #0b7dda;
+}
+
+/* Export Section Stilleri */
+.export-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.export-section h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.export-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.export-split-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.export-label {
+  font-weight: 500;
+  color: #555;
+  font-size: 14px;
+}
+
+.export-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.export-btn:hover {
+  transform: translateY(-1px);
+}
+
+.export-csv-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.export-csv-btn:hover {
+  background: #45a049;
+}
+
+.export-json-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.export-json-btn:hover {
+  background: #0b7dda;
+}
+
+.export-train-btn {
+  background: #4caf50;
+  color: white;
+  font-size: 13px;
+  padding: 8px 14px;
+}
+
+.export-train-btn:hover {
+  background: #45a049;
+}
+
+.export-test-btn {
+  background: #ff9800;
+  color: white;
+  font-size: 13px;
+  padding: 8px 14px;
+}
+
+.export-test-btn:hover {
+  background: #e68900;
+}
+
+.export-validation-btn {
+  background: #2196f3;
+  color: white;
+  font-size: 13px;
+  padding: 8px 14px;
+}
+
+.export-validation-btn:hover {
+  background: #0b7dda;
+}
+
+.import-btn-label {
+  cursor: pointer;
+}
+
+.import-btn {
+  background: #9c27b0;
+  color: white;
+}
+
+.import-btn:hover {
+  background: #7b1fa2;
+}
+
+.import-btn.loading {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.import-info {
+  margin-top: 15px;
+  padding: 12px;
+  background: #e3f2fd;
+  border-radius: 5px;
+  border-left: 3px solid #2196f3;
+}
+
+.import-help-text {
+  margin: 0;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.export-group {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.export-group:last-of-type {
+  border-bottom: none;
+}
+
+.export-group-title {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.download-audio-btn {
+  background: #ff6b35;
+  color: white;
+}
+
+.download-audio-btn:hover {
+  background: #e55a2b;
+}
+
+.download-audio-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.download-selected-btn {
+  background: #ff9800;
+  color: white;
+}
+
+.download-selected-btn:hover {
+  background: #e68900;
+}
+
+.download-selected-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.no-files {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 40px;
+}
+
+.files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.file-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f9f9f9;
+  transition: box-shadow 0.3s;
+}
+
+.file-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.file-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.file-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.file-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.dataset-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dataset-train {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}
+
+.dataset-test {
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ff9800;
+}
+
+.dataset-validation {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #2196f3;
+}
+
+.file-info h3 {
+  color: #333;
+  margin: 0;
+  font-size: 18px;
+  flex: 1;
+}
+
+.file-header-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.delete-button {
+  padding: 8px 16px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.delete-button:hover {
+  background: #cc0000;
+  transform: translateY(-1px);
+}
+
+.delete-button:active {
+  transform: translateY(0);
+}
+
+.edit-button {
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.edit-button:hover {
+  background: #5568d3;
+  transform: translateY(-1px);
+}
+
+.edit-button:active {
+  transform: translateY(0);
+}
+
+.edit-button.save-button {
+  background: #28a745;
+}
+
+.edit-button.save-button:hover {
+  background: #218838;
+}
+
+.edit-button.cancel-button {
+  background: #6c757d;
+}
+
+.edit-button.cancel-button:hover {
+  background: #5a6268;
+}
+
+.edit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.file-edit-form {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #667eea;
+}
+
+.edit-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.edit-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.edit-form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.edit-form-group select,
+.edit-form-group textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #000;
+  background-color: white;
+}
+
+.edit-form-group select:disabled,
+.edit-form-group textarea:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.edit-form-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+@media (max-width: 768px) {
+  .edit-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.file-info p {
+  color: #666;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.file-description {
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  border-left: 3px solid #667eea;
+}
+
+.file-date {
+  color: #999;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Ses Metadata Stilleri (AI Model Eğitimi İçin) */
+.audio-metadata {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f0f4ff;
+  border-radius: 8px;
+  border: 1px solid #d0d8ff;
+}
+
+.audio-metadata h4 {
+  margin: 0 0 12px 0;
+  color: #667eea;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.metadata-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.metadata-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.metadata-label {
+  font-weight: 500;
+  color: #555;
+  font-size: 14px;
+}
+
+.metadata-value {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 14px;
+}
+
+/* Ses Oynatıcı Stilleri - AudioPlayer component'i kendi CSS'ini kullanıyor */

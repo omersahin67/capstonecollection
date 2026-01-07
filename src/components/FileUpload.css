@@ -1,0 +1,134 @@
+/* Dosya yükleme component stilleri */
+
+.file-upload-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.file-upload-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input[type="file"] {
+  padding: 10px;
+  border: 2px dashed #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: #667eea;
+  background: #f0f0f0;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group select {
+  background-color: white;
+  cursor: pointer;
+  color: #000; /* Siyah yazı rengi */
+}
+
+.form-group select option {
+  color: #000; /* Option yazıları siyah */
+  background-color: white;
+}
+
+.form-group select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  color: #666; /* Disabled durumda gri */
+}
+
+.form-group input:disabled,
+.form-group textarea:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.file-info {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e8f4f8;
+  border-radius: 5px;
+  color: #333;
+  font-size: 14px;
+}
+
+.upload-button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  align-self: flex-start;
+}
+
+.upload-button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.upload-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #fcc;
+}
+
+.success-message {
+  background-color: #efe;
+  color: #3c3;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #cfc;
+}
